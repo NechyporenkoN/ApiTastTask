@@ -12,6 +12,9 @@
 		1752C5042158E8D00094C883 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1752C5022158E8D00094C883 /* Main.storyboard */; };
 		1752C5062158E8D50094C883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1752C5052158E8D50094C883 /* Assets.xcassets */; };
 		1752C5092158E8D50094C883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1752C5072158E8D50094C883 /* LaunchScreen.storyboard */; };
+		1752C5112158ECA90094C883 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1752C5102158ECA90094C883 /* SignInVC.swift */; };
+		1752C5132158ECBD0094C883 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1752C5122158ECBD0094C883 /* SignUpVC.swift */; };
+		B8782A450653DB2B6B547083 /* Pods_ApiTastTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EB8C14939E454BC818781F /* Pods_ApiTastTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		1752C5052158E8D50094C883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1752C5082158E8D50094C883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1752C50A2158E8D50094C883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1752C5102158ECA90094C883 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		1752C5122158ECBD0094C883 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		3AE70DB4857F916DE10CC939 /* Pods-ApiTastTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiTastTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApiTastTask/Pods-ApiTastTask.debug.xcconfig"; sourceTree = "<group>"; };
+		8CFC301E6EDB125F422D586B /* Pods-ApiTastTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiTastTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApiTastTask/Pods-ApiTastTask.release.xcconfig"; sourceTree = "<group>"; };
+		D7EB8C14939E454BC818781F /* Pods_ApiTastTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiTastTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8782A450653DB2B6B547083 /* Pods_ApiTastTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				1752C4FD2158E8D00094C883 /* ApiTastTask */,
 				1752C4FC2158E8D00094C883 /* Products */,
+				21C754960729F2C95F70E9FD /* Pods */,
+				3A187478DA7F2B72DC225829 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +67,31 @@
 			children = (
 				1752C4FE2158E8D00094C883 /* AppDelegate.swift */,
 				1752C5002158E8D00094C883 /* ViewController.swift */,
-				1752C5022158E8D00094C883 /* Main.storyboard */,
+				1752C5102158ECA90094C883 /* SignInVC.swift */,
+				1752C5122158ECBD0094C883 /* SignUpVC.swift */,
 				1752C5052158E8D50094C883 /* Assets.xcassets */,
 				1752C5072158E8D50094C883 /* LaunchScreen.storyboard */,
+				1752C5022158E8D00094C883 /* Main.storyboard */,
 				1752C50A2158E8D50094C883 /* Info.plist */,
 			);
 			path = ApiTastTask;
+			sourceTree = "<group>";
+		};
+		21C754960729F2C95F70E9FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AE70DB4857F916DE10CC939 /* Pods-ApiTastTask.debug.xcconfig */,
+				8CFC301E6EDB125F422D586B /* Pods-ApiTastTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3A187478DA7F2B72DC225829 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7EB8C14939E454BC818781F /* Pods_ApiTastTask.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1752C50D2158E8D50094C883 /* Build configuration list for PBXNativeTarget "ApiTastTask" */;
 			buildPhases = (
+				A848E8F92D1C081C9DE0890D /* [CP] Check Pods Manifest.lock */,
 				1752C4F72158E8D00094C883 /* Sources */,
 				1752C4F82158E8D00094C883 /* Frameworks */,
 				1752C4F92158E8D00094C883 /* Resources */,
+				719A56ADAC64128C33C66895 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +162,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		719A56ADAC64128C33C66895 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ApiTastTask/Pods-ApiTastTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApiTastTask/Pods-ApiTastTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A848E8F92D1C081C9DE0890D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApiTastTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1752C4F72158E8D00094C883 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1752C5132158ECBD0094C883 /* SignUpVC.swift in Sources */,
 				1752C5012158E8D00094C883 /* ViewController.swift in Sources */,
 				1752C4FF2158E8D00094C883 /* AppDelegate.swift in Sources */,
+				1752C5112158ECA90094C883 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +363,7 @@
 		};
 		1752C50E2158E8D50094C883 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE70DB4857F916DE10CC939 /* Pods-ApiTastTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +382,7 @@
 		};
 		1752C50F2158E8D50094C883 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CFC301E6EDB125F422D586B /* Pods-ApiTastTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
