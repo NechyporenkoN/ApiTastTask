@@ -102,6 +102,9 @@
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonSignIn:" destination="6Bq-Uz-cNB" eventType="touchUpInside" id="Hp7-HL-Mhl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,6 +124,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UmD-xj-EtS"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="ZZg-L7-iA4" id="Kpr-2O-wKG"/>
+                        <outlet property="passwordTextField" destination="3HN-3l-pkP" id="qrh-Fd-5a1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntm-N3-O7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
