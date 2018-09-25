@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="-564"/>
+            <point key="canvasLocation" x="696" y="-564"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="3Jy-qR-ba2">
@@ -127,11 +127,61 @@
                     <connections>
                         <outlet property="emailTextField" destination="ZZg-L7-iA4" id="Kpr-2O-wKG"/>
                         <outlet property="passwordTextField" destination="3HN-3l-pkP" id="qrh-Fd-5a1"/>
+                        <segue destination="riS-C0-jTP" kind="show" identifier="showGoodAccess" id="oWP-cC-h2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntm-N3-O7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-910"/>
+            <point key="canvasLocation" x="1513" y="-897"/>
+        </scene>
+        <!--Good AccessVC-->
+        <scene sceneID="ZsA-u0-cr4">
+            <objects>
+                <viewController storyboardIdentifier="GoodAccessVC" id="riS-C0-jTP" customClass="GoodAccessVC" customModule="ApiTastTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYA-DL-uzS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Va-QY-MRB">
+                                <rect key="frame" x="16" y="264" width="288" height="40"/>
+                                <color key="backgroundColor" red="0.17468634258419319" green="0.82731202411167515" blue="0.13918869110006732" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="EOF-5x-2eX"/>
+                                    <constraint firstAttribute="height" constant="40" id="cI0-pO-9rK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Get the text">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSignIn:" destination="6Bq-Uz-cNB" eventType="touchUpInside" id="vNu-qN-8J6"/>
+                                    <action selector="getTheText:" destination="riS-C0-jTP" eventType="touchUpInside" id="vgX-x2-kIz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jww-Pe-0gV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Va-QY-MRB" firstAttribute="centerY" secondItem="yYA-DL-uzS" secondAttribute="centerY" id="0MW-1s-7hS"/>
+                            <constraint firstItem="Jww-Pe-0gV" firstAttribute="centerX" secondItem="yYA-DL-uzS" secondAttribute="centerX" id="1TV-gX-Imb"/>
+                            <constraint firstItem="Jww-Pe-0gV" firstAttribute="leading" secondItem="tDm-rQ-zJ0" secondAttribute="leading" id="64H-Dm-3EW"/>
+                            <constraint firstItem="tDm-rQ-zJ0" firstAttribute="trailing" secondItem="4Va-QY-MRB" secondAttribute="trailing" constant="16" id="7Xh-Ez-Mmg"/>
+                            <constraint firstItem="Jww-Pe-0gV" firstAttribute="trailing" secondItem="tDm-rQ-zJ0" secondAttribute="trailing" id="Cj2-jl-5pO"/>
+                            <constraint firstItem="4Va-QY-MRB" firstAttribute="leading" secondItem="tDm-rQ-zJ0" secondAttribute="leading" constant="16" id="knJ-1L-D7R"/>
+                            <constraint firstItem="4Va-QY-MRB" firstAttribute="centerX" secondItem="yYA-DL-uzS" secondAttribute="centerX" id="rcc-1N-uzq"/>
+                            <constraint firstItem="Jww-Pe-0gV" firstAttribute="top" secondItem="tDm-rQ-zJ0" secondAttribute="top" id="rsJ-mm-Gre"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tDm-rQ-zJ0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Txi-oE-BAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2325" y="-564"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="Jo8-4v-FAh">
@@ -208,11 +258,12 @@
                         <outlet property="emailTextField" destination="LwV-RR-Hu6" id="Fea-bi-sdZ"/>
                         <outlet property="nameTextField" destination="Bbg-2d-S0o" id="dUD-9M-n3R"/>
                         <outlet property="passwordTextField" destination="Ig0-vV-QZc" id="dIj-gU-Wnp"/>
+                        <segue destination="riS-C0-jTP" kind="show" identifier="goodSignUp" id="oKo-3w-aAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bP-sS-JOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-218"/>
+            <point key="canvasLocation" x="1513" y="-225"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n7J-GU-kH0">
@@ -230,7 +281,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNa-Ah-OVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="-154" y="-564"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oKo-3w-aAn"/>
+    </inferredMetricsTieBreakers>
 </document>
