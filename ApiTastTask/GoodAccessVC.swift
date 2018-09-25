@@ -12,15 +12,24 @@ import SwiftyJSON
 import SDWebImage
 
 class GoodAccessVC: UIViewController {
-
+    
     var accessTokenDict: [String:String] = [:]
     var strToken = ""
+    var textStr = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let bearer = "Bearer "
         let accesToken = bearer + strToken
         accessTokenDict.updateValue(accesToken, forKey: "Authorization")
-     print("GoodAccessVC pull token = \(accessTokenDict)")
+        print("GoodAccessVC pull token = \(accessTokenDict)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResaltScreen" {
+            let vc = segue.destination as? ResultVC
+            vc?.text = textStr
+        }
     }
     
     func sendRequestOnTheText(key: [String:String]) {
@@ -35,8 +44,9 @@ class GoodAccessVC: UIViewController {
                 if (response.result.error == nil) {
                     let Json = JSON(response.data!)
                     let text = Json["data"].string
-                    let textStr = text!
-                    print("text = \(textStr)")
+                    self.textStr = text!
+                    print("text = \(self.textStr)")
+                    self.performSegue(withIdentifier: "showResaltScreen", sender: nil)
                 }
                 else {
                     debugPrint("HTTP Request text failed: \(response.result.error)")
