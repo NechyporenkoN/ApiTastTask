@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import SDWebImage
 
 class SignUpVC: UIViewController {
     
@@ -22,19 +21,11 @@ class SignUpVC: UIViewController {
     var password = ""
     var tokenStr = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         name = nameTextField.text!
         email = emailTextField.text!
         password = passwordTextField.text!
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goodSignUp" {
-            let vc = segue.destination as? GoodAccessVC
-            vc?.strToken = tokenStr
-        }
     }
     
     func sendRequestRequest(name: String, email: String, password: String) {
@@ -55,8 +46,15 @@ class SignUpVC: UIViewController {
                     self.performSegue(withIdentifier: "goodSignUp", sender: nil)
                 }
                 else {
-                    debugPrint("HTTP Request failed: \(response.result.error)")
+                    debugPrint("HTTP Request failed: \(String(describing: response.result.error))")
                 }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goodSignUp" {
+            let vc = segue.destination as? GoodAccessVC
+            vc?.strToken = tokenStr
         }
     }
     

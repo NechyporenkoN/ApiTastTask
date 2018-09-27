@@ -15,7 +15,6 @@
 		1752C5132158ECBD0094C883 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1752C5122158ECBD0094C883 /* SignUpVC.swift */; };
 		1752C517215A51830094C883 /* GoodAccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1752C516215A51830094C883 /* GoodAccessVC.swift */; };
 		1752C519215A94310094C883 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1752C518215A94310094C883 /* ResultVC.swift */; };
-		1752C51B215C0E920094C883 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1752C51A215C0E910094C883 /* PersonVC.swift */; };
 		B8782A450653DB2B6B547083 /* Pods_ApiTastTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EB8C14939E454BC818781F /* Pods_ApiTastTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		1752C5122158ECBD0094C883 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		1752C516215A51830094C883 /* GoodAccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodAccessVC.swift; sourceTree = "<group>"; };
 		1752C518215A94310094C883 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
-		1752C51A215C0E910094C883 /* PersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVC.swift; sourceTree = "<group>"; };
 		3AE70DB4857F916DE10CC939 /* Pods-ApiTastTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiTastTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApiTastTask/Pods-ApiTastTask.debug.xcconfig"; sourceTree = "<group>"; };
 		8CFC301E6EDB125F422D586B /* Pods-ApiTastTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiTastTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApiTastTask/Pods-ApiTastTask.release.xcconfig"; sourceTree = "<group>"; };
 		D7EB8C14939E454BC818781F /* Pods_ApiTastTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiTastTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +69,6 @@
 			children = (
 				1752C4FE2158E8D00094C883 /* AppDelegate.swift */,
 				1752C518215A94310094C883 /* ResultVC.swift */,
-				1752C51A215C0E910094C883 /* PersonVC.swift */,
 				1752C516215A51830094C883 /* GoodAccessVC.swift */,
 				1752C5102158ECA90094C883 /* SignInVC.swift */,
 				1752C5122158ECBD0094C883 /* SignUpVC.swift */,
@@ -221,7 +218,6 @@
 				1752C4FF2158E8D00094C883 /* AppDelegate.swift in Sources */,
 				1752C517215A51830094C883 /* GoodAccessVC.swift in Sources */,
 				1752C5112158ECA90094C883 /* SignInVC.swift in Sources */,
-				1752C51B215C0E920094C883 /* PersonVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

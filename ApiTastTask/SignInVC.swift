@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import SDWebImage
 
 class SignInVC: UIViewController {
     
@@ -25,16 +24,7 @@ class SignInVC: UIViewController {
         
         email = emailTextField.text!
         password = passwordTextField.text!
-        
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showGoodAccess" {
-            let vc = segue.destination as? GoodAccessVC
-            vc?.strToken = tokenStr
-        }
-    }
-    
     
     func sendRequestForSignIn(email: String, password: String) {
         // JSON Body
@@ -53,8 +43,15 @@ class SignInVC: UIViewController {
                     self.performSegue(withIdentifier: "showGoodAccess", sender: nil)
                 }
                 else {
-                    debugPrint("HTTP Request Log in failed: \(response.result.error)")
+                    debugPrint("HTTP Request Log in failed: \(String(describing: response.result.error))")
                 }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showGoodAccess" {
+            let vc = segue.destination as? GoodAccessVC
+            vc?.strToken = tokenStr
         }
     }
     

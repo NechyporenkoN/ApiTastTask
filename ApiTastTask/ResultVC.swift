@@ -12,22 +12,22 @@ class ResultVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     var text = ""
-    //    var sortedArr: [Character] = []
     var dictChar: [String: Int] = [:]
     var arrSimbols: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         characterCounting(text: text)
+        convertDictToStringAndSorted()
+    }
+    
+    func convertDictToStringAndSorted() {
         let dictToString = (dictChar.compactMap({ (key, value) -> String in
             return "\(key)=\(value)"
         }) as Array).joined(separator: ";")
-        print("string = \(dictToString)")
         arrSimbols = dictToString.components(separatedBy: ";").sorted {$0 < $1}
-        
-        print("string = \(arrSimbols)")
     }
     
     func characterCounting(text: String) {
@@ -35,7 +35,6 @@ class ResultVC: UIViewController {
         var sortedArr = textArr.sorted {$0 < $1}
         var key = ""
         var value = 0
-        print("sorted = \(sortedArr)")
         for _ in 0..<sortedArr.count {
             let firstSimbol = sortedArr.removeFirst()
             if key != "" {

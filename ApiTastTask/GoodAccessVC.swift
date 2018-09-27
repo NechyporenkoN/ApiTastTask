@@ -9,33 +9,24 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import SDWebImage
+
 
 class GoodAccessVC: UIViewController {
     
     var accessTokenDict: [String:String] = [:]
     var strToken = ""
     var textStr = ""
-    var textPerson: [String:Any] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createdAccessToken()
+    }
+    
+    func createdAccessToken() {
         let bearer = "Bearer "
         let accesToken = bearer + strToken
         accessTokenDict.updateValue(accesToken, forKey: "Authorization")
-        print("GoodAccessVC pull token = \(accessTokenDict)")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showResaltScreen" {
-            let vc = segue.destination as? ResultVC
-            vc?.text = textStr
-        }
-//        if segue.identifier == "resultPerson" {
-//            let vc = segue.destination as? PersonVC
-//            vc?.personDict = textPerson
-//        }
-        
     }
     
     func sendRequestOnTheText(key: [String:String]) {
@@ -51,43 +42,20 @@ class GoodAccessVC: UIViewController {
                     let text = Json["data"].string
                     self.textStr = text!
                     self.performSegue(withIdentifier: "showResultScreen", sender: nil)
-                }
-                else {
-                    debugPrint("HTTP Request text failed: \(response.result.error)")
+                } else {
+                    debugPrint("HTTP Request text failed: \(String(describing: response.result.error))")
                 }
         }
     }
     
-//    func getPersonObjectRequest(key: [String:String]) {
-//        // Add Headers
-//        let headers = key
-//
-//        // Fetch Request
-//        Alamofire.request("http://apiecho.cf/api/get/person/", method: .get, headers: headers)
-//            .validate(statusCode: 200..<300)
-//            .responseJSON { response in
-//                if (response.result.error == nil) {
-//                    let Json = JSON(response.data!)
-//                    let text = Json["data"].dictionaryObject
-//                    self.textPerson = text!
-//                        print("error")
-//                    self.performSegue(withIdentifier: "resultPerson", sender: nil)
-//                    }
-//                else {
-//                    debugPrint("HTTP Request failed: \(response.result.error)")
-//                }
-//        }
-//    }
-    
-    
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResultScreen" {
+            let vc = segue.destination as? ResultVC
+            vc?.text = textStr
+        }
+    }
     
     @IBAction func getTheText(_ sender: Any) {
-        print("key = \(accessTokenDict)")
         sendRequestOnTheText(key: accessTokenDict)
     }
-//    @IBAction func getPerson(_ sender: Any) {
-//        getPersonObjectRequest(key: accessTokenDict)
-//    }
-    
 }
